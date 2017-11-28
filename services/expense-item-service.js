@@ -1,15 +1,19 @@
 const fs = require('fs');
 const ExpenseItemModel = require('../models/expense-item-model');
 
-async const add = (expenseItem) => {
+async function findAll() {
+    return ExpenseItemModel.find();
+};
+
+async function add(expenseItem) {
     return ExpenseItemModel.create(expenseItem);
 };
 
-async const remove = (id) => {
+async function remove (id) {
     return ExpenseItemModel.remove({ id });
 };
 
-async const findBy = (id) => {
+async function findBy(id) {
     return ExpenseItemModel.findOne({ id });
 };
 
