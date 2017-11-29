@@ -2,7 +2,7 @@ const fs = require('fs');
 const ExpenseItemModel = require('../models/expense-item-model');
 
 async function findAll() {
-    console.log(ExpenseItemModel.find());
+    (ExpenseItemModel.find());
     return ExpenseItemModel.find();
 };
 

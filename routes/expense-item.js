@@ -12,9 +12,9 @@ router.get('/all', async(req, res, next) => {
 });
 
 router.post('/', async(req, res, next) => {
-    console.log("request > ", req.body);    
+    ("request > ", req.body);    
     const item = await ExpenseItemService.add(req.body);
-    console.log("item > ", item);
+    ("item > ", item);
     res.send(item);
 });
 
