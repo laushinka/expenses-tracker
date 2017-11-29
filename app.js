@@ -3,6 +3,8 @@ const bodyParser = require('body-parser');
 const cookieParser = require('cookie-parser');
 const expenseItem = require('./routes/expense-item');
 
+require('./database-connection');
+
 const app = express();
 
 app.use(bodyParser.json());
