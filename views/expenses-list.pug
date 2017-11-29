@@ -3,12 +3,12 @@ extends layout
 block content
     h1(class="headline") Hey, there! Hope you're having a thrifty #{moment(Date.now()).format('dddd')}.
     if expenses.length
-        p #{moment(Date.now()).format('DD/MM/YYYY')}
+        p(class="today") It is now #{moment(Date.now()).format('dddd, Do MMMM YYYY, h:mm A')}
         table
             thead(class="table-header")
                 td ID
                 td Name
-                td Cost
+                td Cost (€)
                 td Category
             each item in expenses
                 tr(class="table-row")
