@@ -2,6 +2,7 @@ const fs = require('fs');
 const ExpenseItemModel = require('../models/expense-item-model');
 
 async function findAll() {
+    console.log(ExpenseItemModel.find());
     return ExpenseItemModel.find();
 };
 
@@ -18,6 +19,7 @@ async function findBy(id) {
 };
 
 module.exports = {
+    findAll,
     add,
     remove,
     findBy

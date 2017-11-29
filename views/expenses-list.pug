@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    h1 Hello!
+    if expenses.length
+        p Here are the people:
+        table
+            thead
+                td ID
+                td Name
+                td Cost
+            each item in expenses
+                tr
+                    td #{item.id}
+                    td #{item.name}
+                    td #{item.age}
+
+        pre= JSON.stringify(expenses, null, 2)
+    else
+        p No expenses yet!
+    script.
+        console.log(!{JSON.stringify(expenses)})

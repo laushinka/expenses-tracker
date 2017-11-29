@@ -6,13 +6,9 @@ const ExpenseItemSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    amount: {
+    cost: {
         type: Number,
         min: 0,
-        required: true
-    },
-    date: {
-        type: Date,
         required: true
     },
     category: {
