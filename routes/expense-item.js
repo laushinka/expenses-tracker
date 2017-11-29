@@ -3,7 +3,7 @@ const router = express.Router()
 const ExpenseItemService = require('../services/expense-item-service');
 
 router.get('/', async(req, res, next) => {
-    res.send(await ExpenseItemService.findAll;
+    res.send(await ExpenseItemService.findAll());
 });
 
 router.post('/', async(req, res, next) => {
