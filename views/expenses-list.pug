@@ -3,7 +3,7 @@ extends layout
 block content
     h1 Hello!
     if expenses.length
-        p Here are the people:
+        p Here are the expenses:
         table
             thead
                 td ID
@@ -19,4 +19,4 @@ block content
     else
         p No expenses yet!
     script.
-        console.log(!{JSON.stringify(expenses)})
+        (!{JSON.stringify(expenses)})
