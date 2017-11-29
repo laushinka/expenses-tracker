@@ -5,16 +5,17 @@ block content
     if expenses.length
         p Here are the expenses:
         table
-            thead
+            thead(class="table-header")
                 td ID
                 td Name
                 td Cost
+                td Category
             each item in expenses
-                tr
-                    td #{item.id}
-                    td #{item.name}
-                    td #{item.cost}
-                    td #{item.category}
+                tr(class="table-row")
+                    td(class="item-id") #{item.id}
+                    td(class="item-name") #{item.name}
+                    td(class="item-cost") #{item.cost}
+                    td(class="item-category") #{item.category}
 
         pre= JSON.stringify(expenses, null, 2)
     else
