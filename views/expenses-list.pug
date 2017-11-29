@@ -1,9 +1,9 @@
 extends layout
 
 block content
-    h1 Hello!
+    h1(class="headline") Hey, there! Hope you're having a thrifty #{moment(Date.now()).format('dddd')}.
     if expenses.length
-        p Here are the expenses:
+        p #{moment(Date.now()).format('DD/MM/YYYY')}
         table
             thead(class="table-header")
                 td ID
@@ -17,7 +17,7 @@ block content
                     td(class="item-cost") #{item.cost}
                     td(class="item-category") #{item.category}
 
-        pre= JSON.stringify(expenses, null, 2)
+        //- pre= JSON.stringify(expenses, null, 2)
     else
         p No expenses yet!
     script.
